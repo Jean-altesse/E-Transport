@@ -1,0 +1,8 @@
+
+
+
+
+
+
+class Voyage:
+    pass
