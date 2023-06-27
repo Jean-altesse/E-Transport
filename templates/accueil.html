@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/accueil.css') }}">
     <title>Document</title>
 </head>
 <body>
@@ -16,9 +16,9 @@
         <li><a href="#">acceuil</a></li>
         <li><a href="#">compagnies</a></li>
         <li><a href="#">historiques</a></li>
-        <li><a href="#">à propos</a></li>
-        <li><a href="#">incription</a></li>
-        <li><a href="#">connexion</a></li>
+        <li><a href="{{ url_for('a_propos.a_propos') }}">à propos</a></li>
+        <li><a href="{{ url_for('inscription.inscription') }}">incription</a></li>
+        <li><a href="{{ url_for('connexion.connexion') }}">connexion</a></li>
     </ul>
     </div>
 
@@ -101,7 +101,8 @@
         <div class="card">
             <div class="zoom-img">
                 <div class="img-card">
-                    <img src="image/bouaké.jpeg">
+                    <img src="{{ url_for('static', filename='images/bouaké.jpeg') }}" alt="Image">
+
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293736/james-wheeler_xqmq2y.jpg"> -->
                 </div>
             </div>
@@ -121,6 +122,8 @@
             <div class="zoom-img">
                 <div class="img-card">
                     <img src="image/Man.jpeg">
+                    <img src="{{ url_for('static', filename='images/Man.jpeg') }}" alt="Image">
+
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293755/paris_uj8wum.jpg"> -->
                 </div>
             </div>
@@ -140,6 +143,8 @@
             <div class="zoom-img">
                 <div class="img-card">
                     <img src="image/san-pedro1.jpeg">
+                    <img src="{{ url_for('static', filename='images/san-pedro1.jpeg') }}" alt="Image">
+
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293955/monaco_usu7xb.jpg"> -->
                 </div>
             </div>
@@ -160,6 +165,7 @@
                 <div class="img-card">
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293874/switzerland_tubxcm.jpg"> -->
                     <img src="image/danseboloye.jpeg">
+                    <img src="{{ url_for('static', filename='images/danseboloye.jpeg') }}" alt="Image">
                 </div>
             </div>
 
@@ -178,6 +184,7 @@
             <div class="zoom-img">
                 <div class="img-card">
                     <img src="image/Bondoukou.jpeg">
+                    <img src="{{ url_for('static', filename='images/Bondoukou.jpeg') }}" alt="Image">
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/korea_bxrcj5.jpg"> -->
                 </div>
             </div>
@@ -197,6 +204,7 @@
             <div class="zoom-img">
                 <div class="img-card">
                     <img src="image/yakro.jpeg">
+                    <img src="{{ url_for('static', filename='images/yakro.jpeg') }}" alt="Image">
                     <!-- <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/night-4336403_1920_demehp.jpg"> -->
                 </div>
             </div>

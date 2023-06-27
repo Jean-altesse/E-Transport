@@ -83,8 +83,7 @@ ul.menu {
 
 /*=============================Banner=============================*/
 .banner {
-    /* background-image: url("https://res.cloudinary.com/dxssqb6l8/image/upload/v1605294054/young-woman-enjoying-beautiful-scenery-of-lago-di-braies-italy-picjumbo-com_aa0fvw.jpg"); */
-    background-image: url("image/sandro-antonietti-JHMlN41jM0M-unsplash.jpg");
+    background-image: url("../images/sandro-antonietti-JHMlN41jM0M-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,15 +1,35 @@
+# from flask import Flask ,render_template
+# from models.User import db
+# from routes.main import *
+# from routes import login_routes, dashboard_routes
 
-from flask import Flask
-from models.User import db
-from route.main import *
+# app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'  # Configuration de la base de données SQLite
+# db.init_app(app)
+
+# app.register_blueprint(login_routes.bp)
+# app.register_blueprint(dashboard_routes.bp)
+
+
+# if __name__ == '__main__':
+#     app.run()
+
+from flask import Flask, render_template
+from routes.main import bp as main_bp
+from routes import accueil, compagnies, historiques, a_propos, inscription, connexion
+
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'  # Configuration de la base de données SQLite
-db.init_app(app)
+app.register_blueprint(main_bp)
+app.register_blueprint(accueil.bp)
+app.register_blueprint(compagnies.bp)
+app.register_blueprint(historiques.bp)
+app.register_blueprint(a_propos.bp, url_prefix='/a_propos')  # Enregistrement avec le préfixe '/a_propos'
+app.register_blueprint(inscription.bp, url_prefix='/inscription') 
+app.register_blueprint(connexion.bp, url_prefix='/connexion')
 
 if __name__ == '__main__':
     app.run()
-
 
 
 
